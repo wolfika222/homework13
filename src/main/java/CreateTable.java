@@ -30,5 +30,19 @@ public class CreateTable {
 
         }
     }
+
+    public static void deleteTable(String tableName, String deletePath){
+        Connection connection = DbUtil.getConnection();
+
+        try {
+            Statement statement = connection.createStatement();
+
+            statement.executeUpdate("DELETE FROM" + tableName + "WHERE" + deletePath);
+
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
 

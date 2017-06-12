@@ -5,8 +5,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-       // PaymentQuery.QuerySelect(4);
+        PaymentQuery.QuerySelect(4);
         CreateTable.tableCreator("TABLE", "first", "VARCHAR(255)", "last", "VARCHAR(255)", "age", "INTEGER");
-
+        CreateTable.deleteTable("TABLE", "first = 1");
     }
 }
